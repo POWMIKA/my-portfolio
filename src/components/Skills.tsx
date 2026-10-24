@@ -81,7 +81,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-[#edf1f4] px-5 py-16 sm:px-8 md:py-20"
+     className="bg-[#edf1f4] px-4 py-14 sm:px-8 sm:py-16 md:py-20 lg:px-10"
     >
       <div className="mx-auto max-w-6xl">
         {/* Section heading */}
@@ -106,7 +106,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Technology cards */}
-        <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-7 grid grid-cols-1 gap-3 min-[400px]:grid-cols-2 sm:mt-9 sm:gap-4 lg:grid-cols-4">
           {skills.map((skill, index) => {
           const Icon = "icon" in skill ? skill.icon : null;
 
@@ -121,14 +121,14 @@ export default function Skills() {
                   delay: (index % 4) * 0.07,
                 }}
                 whileHover={{ y: -5, scale: 1.015 }}
-                className="group flex min-h-[104px] items-center gap-5 rounded-xl border border-white/80 bg-[#f8fafb] px-5 py-5 shadow-[0_7px_16px_rgba(31,41,55,0.07)] transition-shadow duration-300 hover:shadow-[0_13px_24px_rgba(31,41,55,0.12)] sm:px-6"
+               className="group flex min-h-[84px] min-w-0 items-center gap-3 rounded-xl border border-white/80 bg-[#f8fafb] px-3 py-4 shadow-[0_7px_16px_rgba(31,41,55,0.07)] transition-shadow duration-300 hover:shadow-[0_13px_24px_rgba(31,41,55,0.12)] min-[400px]:gap-4 min-[400px]:px-4 sm:min-h-[104px] sm:gap-5 sm:px-6 sm:py-5"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center">
+               <div className="flex h-10 w-10 shrink-0 items-center justify-center sm:h-14 sm:w-14">
                  {Icon ? (
   <Icon
-    size={48}
+    size={36}
     color={skill.color}
-    className="transition-transform duration-300 group-hover:scale-110"
+   className="h-9 w-9 transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12"
   />
 ) : (
   <span
@@ -140,7 +140,7 @@ export default function Skills() {
 )}
                 </div>
 
-                <span className="text-sm font-semibold text-[#273142] sm:text-base">
+                <span className="min-w-0 break-words text-sm font-semibold leading-snug text-[#273142] sm:text-base">
                   {skill.name}
                 </span>
               </motion.div>

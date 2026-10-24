@@ -46,7 +46,7 @@ useEffect(() => {
   return (
     <section
       id="achievements"
-      className="relative overflow-hidden bg-[#f8f3eb] px-5 py-16 sm:px-8 md:py-20"
+      className="relative overflow-hidden bg-[#f8f3eb] px-4 py-14 sm:px-8 sm:py-16 md:py-20 lg:px-10"
     >
       <div className="mx-auto max-w-6xl">
         {/* Heading */}
@@ -91,7 +91,7 @@ useEffect(() => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.65 }}
           whileHover={{ y: -5 }}
-          className="group relative mt-9 overflow-hidden rounded-2xl border border-white bg-[#fffdf8] p-5 shadow-[0_6px_24px_rgba(65,48,30,0.06)] transition-shadow duration-300 hover:shadow-[0_16px_38px_rgba(65,48,30,0.12)] sm:p-7 md:p-8"
+         className="group relative mt-7 overflow-hidden rounded-2xl border border-white bg-[#fffdf8] p-4 shadow-[0_6px_24px_rgba(65,48,30,0.06)] transition-shadow duration-300 hover:shadow-[0_16px_38px_rgba(65,48,30,0.12)] sm:mt-9 sm:p-7 md:p-8"
         >
           {/* Decorative background */}
           <motion.div
@@ -149,7 +149,7 @@ useEffect(() => {
             <motion.div
               whileHover={{ rotate: 2, scale: 1.035 }}
               transition={{ duration: 0.35 }}
-              className="relative flex min-h-[170px] flex-col justify-between overflow-hidden rounded-2xl border border-[#eadbc8] bg-gradient-to-br from-[#f8eddf] via-[#f3e5d3] to-[#e9d5bd] p-5"
+            className="relative flex min-h-[145px] flex-col justify-between overflow-hidden rounded-2xl border border-[#eadbc8] bg-gradient-to-br from-[#f8eddf] via-[#f3e5d3] to-[#e9d5bd] p-4 sm:min-h-[170px] sm:p-5"
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold tracking-[0.2em] text-[#986b45]">
@@ -180,7 +180,7 @@ useEffect(() => {
       <AnimatePresence>
         {showDetails && (
           <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden overscroll-none bg-[#172033]/60 p-4 backdrop-blur-sm sm:p-6"
+         className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden overscroll-none bg-[#172033]/60 p-2 backdrop-blur-sm sm:p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -198,15 +198,15 @@ useEffect(() => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 15, scale: 0.97 }}
               transition={{ duration: 0.25 }}
-            className="max-h-[calc(100dvh-2rem)] w-full max-w-2xl overflow-y-auto overscroll-contain rounded-3xl border border-white bg-[#fffdf8] shadow-2xl sm:max-h-[calc(100dvh-3rem)]"
+           className="max-h-[calc(100dvh-1rem)] min-h-0 w-full max-w-2xl overflow-y-auto overscroll-contain rounded-2xl border border-white bg-[#fffdf8] shadow-2xl sm:max-h-[calc(100dvh-3rem)] sm:rounded-3xl"
             >
               {/* Popup header */}
-              <div className="relative bg-[#f3e6d6] px-6 py-7 sm:px-8">
+              <div className="relative bg-[#f3e6d6] px-4 py-5 sm:px-8 sm:py-7">
                 <button
                   type="button"
                   onClick={() => setShowDetails(false)}
                   aria-label="Close publication details"
-                  className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-white/80 text-xl text-[#604b39] transition hover:rotate-90 hover:bg-white"
+                 className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/80 text-xl text-[#604b39] transition hover:rotate-90 hover:bg-white sm:right-5 sm:top-5"
                 >
                   ×
                 </button>
@@ -228,7 +228,7 @@ useEffect(() => {
               </div>
 
               {/* Popup content */}
-              <div className="space-y-6 px-6 py-6 sm:px-8 sm:py-8">
+              <div className="space-y-6 px-4 py-5 sm:px-8 sm:py-8">
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-[#9a6945]">
                     About the research

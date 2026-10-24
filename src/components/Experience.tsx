@@ -112,7 +112,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="relative overflow-hidden bg-[#f1f3fa] px-5 py-16 sm:px-8 md:py-20"
+     className="relative overflow-hidden bg-[#f1f3fa] px-4 py-14 sm:px-8 sm:py-16 md:py-20 lg:px-10"
     >
       {/* Background decoration */}
       <motion.div
@@ -167,7 +167,7 @@ export default function Experience() {
 
       
 {/* Vertical animated timeline */}
-<div className="relative mt-9">
+<div className="relative mt-7 sm:mt-9">
   {/* Timeline track */}
   <div className="absolute bottom-10 left-[15px] top-10 w-px bg-[#d4d9e8] sm:left-[19px]" />
 
@@ -181,7 +181,7 @@ export default function Experience() {
     style={{ height: "calc(100% - 5rem)" }}
   />
 
-  <div className="space-y-7">
+  <div className="space-y-5 sm:space-y-7">
     {experiences.map((item, index) => (
       <div key={item.company} className="relative pl-10 sm:pl-12">
         {/* Timeline node */}
@@ -209,7 +209,7 @@ export default function Experience() {
             ease: "easeOut",
           }}
           whileHover={{ x: 4, y: -3 }}
-                    className="relative isolate overflow-hidden rounded-2xl border border-white/70 p-5 shadow-[0_6px_24px_rgba(36,48,85,0.06)] transition-shadow duration-300 hover:shadow-[0_14px_32px_rgba(36,48,85,0.13)] sm:p-6"
+         className="relative isolate min-w-0 overflow-hidden rounded-2xl border border-white/70 p-4 shadow-[0_6px_24px_rgba(36,48,85,0.06)] transition-shadow duration-300 hover:shadow-[0_14px_32px_rgba(36,48,85,0.13)] sm:p-6"
           style={{ background: item.gradient }}
         >
           <div
@@ -250,7 +250,7 @@ export default function Experience() {
                   {item.period}
                 </p>
 
-                <h3 className="mt-2 text-xl font-semibold tracking-tight text-[#172033] sm:text-2xl">
+                <h3 className="mt-2 break-words text-lg font-semibold tracking-tight text-[#172033] sm:text-2xl">
                   {item.role}
                 </h3>
 
@@ -266,7 +266,7 @@ export default function Experience() {
 
           </div>
 
-             <p className="mt-4 text-sm leading-6 text-[#4f5b72]">
+             <p className="mt-4 text-sm leading-6 text-[#4f5b72] sm:text-base sm:leading-7">
             {item.summary}
           </p>
 
@@ -296,7 +296,7 @@ export default function Experience() {
           <motion.div
             key="experience-modal"
                        data-lenis-prevent
-            className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-[#11182a]/55 p-4 backdrop-blur-sm sm:p-6"
+           className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-[#11182a]/55 p-2 backdrop-blur-sm sm:p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -314,11 +314,11 @@ export default function Experience() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 16, scale: 0.97 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="relative my-auto max-h-[88vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-white/80 bg-[#fffefa] shadow-2xl"
+             className="relative my-auto max-h-[calc(100dvh-1rem)] min-h-0 w-full max-w-2xl overflow-y-auto overscroll-contain rounded-2xl border border-white/80 bg-[#fffefa] shadow-2xl sm:max-h-[88vh] sm:rounded-3xl"
             >
               {/* Modal header */}
               <div
-                className="relative overflow-hidden px-6 py-6 sm:px-8 sm:py-7"
+              className="relative overflow-hidden px-4 py-5 sm:px-8 sm:py-7"
                  style={{ background: selected.gradient }}
               >
                 <div className="flex items-start gap-4 pr-10">
@@ -369,7 +369,7 @@ export default function Experience() {
 
               {/* Modal body */}
                           <div
-                className="space-y-7 px-6 py-6 sm:px-8 sm:py-8"
+             className="space-y-6 px-4 py-5 sm:space-y-7 sm:px-8 sm:py-8"
                 style={{
                   background: `linear-gradient(180deg, ${selected.soft} 0%, #ffffff 65%)`,
                 }}

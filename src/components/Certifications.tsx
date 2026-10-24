@@ -33,7 +33,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="bg-[#f8f6f0] px-5 py-16 sm:px-8 md:py-20"
+     className="bg-[#f8f6f0] px-4 py-14 sm:px-8 sm:py-16 md:py-20 lg:px-10"
     >
       <div className="mx-auto max-w-6xl">
         <motion.div
@@ -56,7 +56,7 @@ export default function Certifications() {
           </p>
         </motion.div>
 
-        <div className="mt-9 grid gap-5 md:grid-cols-2">
+       <div className="mt-7 grid grid-cols-1 gap-4 sm:mt-9 sm:gap-5 md:grid-cols-2">
           {certifications.map((cert, index) => (
             <motion.article
               key={cert.title}
@@ -65,13 +65,13 @@ export default function Certifications() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.45, delay: index * 0.12 }}
               whileHover={{ y: -5 }}
-              className="flex items-start gap-4 rounded-2xl border border-white bg-white/80 p-5 shadow-[0_7px_20px_rgba(31,41,55,0.06)] transition-shadow hover:shadow-[0_14px_28px_rgba(31,41,55,0.1)] sm:gap-5 sm:p-7"
+             className="flex min-w-0 items-start gap-3 rounded-2xl border border-white bg-white/80 p-4 shadow-[0_7px_20px_rgba(31,41,55,0.06)] transition-shadow hover:shadow-[0_14px_28px_rgba(31,41,55,0.1)] sm:gap-5 sm:p-7"
             >
               <div
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl"
+               className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl sm:h-14 sm:w-14"
                 style={{ backgroundColor: cert.background }}
               >
-                <Award size={30} color={cert.accent} />
+              <Award className="h-6 w-6 sm:h-[30px] sm:w-[30px]" color={cert.accent} />
               </div>
 
               <div className="min-w-0 flex-1">

@@ -41,7 +41,7 @@ export default function Education() {
   return (
     <section
       id="education"
-          className="relative overflow-hidden bg-[#f8f6f1] px-5 py-16 sm:px-8 md:py-20"
+          className="relative overflow-hidden bg-[#f8f6f1] px-4 py-14 sm:px-8 sm:py-16 md:py-20 lg:px-10"
     >
       {/* Animated background glow */}
       <motion.div
@@ -62,7 +62,7 @@ export default function Education() {
               <div className="relative mx-auto max-w-6xl">
         {/* Heading */}
         <motion.div
-          className="mb-9 md:mb-11"
+          className="mb-7 sm:mb-9 md:mb-11"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -106,7 +106,7 @@ export default function Education() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: index * 0.15 }}
               whileHover={{ y: -5 }}
-             className={`group relative overflow-hidden rounded-2xl ${item.bg} p-5 transition-shadow duration-500 hover:shadow-lg sm:p-6 lg:p-7`}
+             className={`group relative overflow-hidden rounded-2xl ${item.bg} p-4 transition-shadow duration-500 hover:shadow-lg sm:p-6 lg:p-7`}
             >
                      {/* Accent bar */}
               <div
@@ -127,7 +127,7 @@ export default function Education() {
                 className={`absolute -right-16 -top-16 h-44 w-44 rounded-full ${item.glow}`}
               />
 
-                <div className="relative grid gap-5 md:grid-cols-[175px_minmax(0,1fr)_190px] md:items-center md:gap-6">
+               <div className="relative grid min-w-0 grid-cols-1 gap-4 sm:gap-5 md:grid-cols-[175px_minmax(0,1fr)_190px] md:items-center md:gap-6">
                 {/* Period */}
                 <div>
                   <p
@@ -173,7 +173,7 @@ export default function Education() {
                 </div>
 
                 {/* Campus image */}
-                    <div className="relative h-28 w-full overflow-hidden rounded-xl shadow-md ring-4 ring-white/80 md:h-32">
+                   <div className="relative h-36 w-full overflow-hidden rounded-xl shadow-md ring-4 ring-white/80 sm:h-44 md:h-32">
                   <Image
                     src={item.image}
                     alt={`${item.name} campus`}
